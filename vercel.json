@@ -1,8 +1,11 @@
 {
-  "build": {
-    "env": {
-      "JEKYLL_ENV": "production"
-    },
-    "commands": ["bundle install", "jekyll build"]
+  "builds": [
+    {
+      "src": "Gemfile",
+      "use": "@vercel/ruby"
+    }
+  ],
+  "env": {
+    "BUNDLE_PATH": ".vercel/bundler"
   }
 }
